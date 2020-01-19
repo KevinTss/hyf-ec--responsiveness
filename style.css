@@ -12,7 +12,7 @@ body {
 
 .main {
   display: flex;
-  height: 100%;
+  /* height: 100%; */
 }
 
 .aside {
@@ -23,4 +23,74 @@ body {
 .content {
   flex-grow: 1;
   background-color: lightgreen;
+}
+
+.pic {
+  display: flex;
+  height: 400px;
+  width: 100%;
+  background-image: url("https://image.made-in-china.com/202f0j00yOzawVfCAMuD/Puppy-Cute-Dog-Winer-Clothing-Products-Pet-Clothes.webp");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  background-color: white;
+}
+
+.infos {
+  display: flex;
+}
+
+.text-info {
+  width: 25%;
+  border: 5px solid pink;
+}
+
+.another {
+  display: flex;
+}
+
+.another .left {
+  flex-grow: 1;
+  background-color: olive;
+}
+
+.another .right {
+  width: 250px;
+  background-color: darkblue;
+}
+
+.final-content {
+  display: flex;
+  height: 300px;
+  width: 100%;
+  background-color: beige;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-button {
+  border: 1px solid blue;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@media only screen and (max-width: 600px) {
+  .another {
+    flex-direction: column;
+  }
+  .another .right {
+    width: 100%;
+  }
+  .aside {
+    position: absolute;
+    top: 0;
+    left: -200px;
+    transition: all 0.5s;
+  }
+  .visible {
+    left: 0;
+    height: 100vh;
+  }
 }

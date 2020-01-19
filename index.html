@@ -8,9 +8,12 @@
   <body>
     <div class="navbar">
       Navbar
+      <button id="menu-button" class="menu-button">
+        Show menu
+      </button>
     </div>
     <div class="main">
-      <aside class="aside">
+      <aside class="aside" id="aside">
         <ul>
           <li>Home</li>
           <li>About</li>
@@ -18,11 +21,58 @@
         </ul>
       </aside>
       <main class="content">
-        content
+        <section class="pic"></section>
+        <section class="infos">
+          <p class="text-info">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia,
+            explicabo officia. Nemo laborum esse!
+          </p>
+          <p class="text-info">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia,
+            explicabo officia. Nemo laborum esse!
+          </p>
+          <p class="text-info">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia,
+            explicabo officia. Nemo laborum esse!
+          </p>
+          <p class="text-info">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia,
+            explicabo officia. Nemo laborum esse!
+          </p>
+        </section>
+        <section class="another">
+          <div class="left">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse
+            temporibus suscipit quo, dolor delectus soluta cumque nesciunt unde
+            est quasi quam vel ullam non. Vero voluptate perspiciatis aperiam ut
+            eveniet!
+          </div>
+          <div class="right">
+            hello
+          </div>
+        </section>
+        <section class="final-content">
+          Hey finale content
+        </section>
+        <section class="content">
+          lorem*100
+        </section>
       </main>
     </div>
     <div class="footer">
       footer content
     </div>
+    <script>
+      var aside = document.getElementById("aside");
+      var button = document.getElementById("menu-button");
+      console.log(button);
+      button.addEventListener("click", () => {
+        if (aside.classList.contains("visible")) {
+          aside.classList.remove("visible");
+        } else {
+          aside.classList.add("visible");
+        }
+      });
+    </script>
   </body>
 </html>
